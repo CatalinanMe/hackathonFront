@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banchile Inversiones</title>
+
+ 
+        <!-- ... Otros elementos en head -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.13/xlsx.full.min.js"></script>
+    
+    
+    
+    <!-- Bootstrap CSS (Versión 5.3.2) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+
+    <!-- jQuery y Bootstrap JS (Versión 5.3.2) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- versión 3.4 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <!-- DataTables Buttons -->
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+  <!-- DataTables Buttons CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+
+    <!-- CSS tabla -->
+    <link rel="stylesheet" type="text/css" href="./estilo.css" />
+   
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+      <div class="navbarSimple">
+        <ul class="nav-item">
+          <li><a class="nav-link1" href="#">TU EJECUTIVO</a></li>
+          <li><a class="nav-link2" href="#">CONSULTAS</a></li>
+          <li><a class="nav-link3" href="#">AYUDA</a></li>
+          <li><a class="nav-link4" href="#">CERRAR SESION</a></li>
+        </ul>
+      </div>
+      <div class="navgarMenuMain">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <div class="logomain">
+              <img src="./img/logo.png" width="100" height="auto" alt="Logo" />
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #ffffff">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #ffffff"
+                >Mis Productos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #ffffff"
+                >Transferencias y Pagos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #ffffff"
+                >Inversiones</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #ffffff"
+                >Perfil y Configuración</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #ffffff"
+                >Mis Documentos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #ffffff"
+                >Mis Ofertas</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SECCIÓN DE TABLAS -->
+    <br />
+    <!-- CAROUSEL -->
+    <div class="carruselContainer">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="4000"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/hacka2.png" class="foto1" alt="imgA" />
+          </div>
+          <div class="carousel-item">
+            <img src="./img/1.png" class="foto2" alt="imgB" />
+          </div>
+          <div class="carousel-item">
+            <img src="./img/hola.jpg" class="foto3" alt="imgC" />
+          </div>
+          <div class="carousel-item">
+            <img src="./img/png3.png" class="foto4" alt="imgD" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- INVERSIÓN -->
+    <div class="contenedor">
+      <h1>Gestión de Productos de Inversión</h1>
+      <div class="filtros">
+        <label for="dia">Días de Cargo:</label>
+        <select class="dia" id="dia" name="dia">
+          <option class="numerosDias" value="5">5</option>
+          <option class="numerosDias" value="10">10</option>
+          <option class="numerosDias" value="15">15</option>
+          <option class="numerosDias" value="20">20</option>
+        </select>
+        <label for="filtrar">Filtrar</label>
+        <select class="filtrar" id="filtrar" name="filtrar">
+          <option class="ascendente" value="ascendente">ascendente</option>
+          <option class="descendente" value="descendente">descendente</option>
+        </select>
+        <label for="producto">Producto:</label>
+        <select class="producto" id="producto" name="producto">
+          <option value="APV">APV</option>
+          <option value="Mis Metas">Mis Metas</option>
+        </select>
+        <label for="rut">RUT/RUN:</label>
+        <input class="rut" type="text" id="rut" name="rut" />
+        <button id="buscar"><img src="./icon/Lupa.svg" alt="Search" /></button>
+      </div>
+      <!-- Filtrar -->
+      <div class="row mt-3">
+        <div class="col-md-12">
+            <table class="table table-bordered" id="myDataTable">
+                <thead>
+                    <tr>
+                      <th>Nombre Completo</th>
+                      <th>Rut</th>
+                      <th>Número de cuenta</th>
+                      <th>Monto($)</th>
+                      <th>Día</th>
+                      <th>Producto</th>
+                      <th>Código de servicio</th>
+                    </tr>
+                  </thead>
+                <tbody>
+                    <!-- Aquí puedes agregar tus filas de datos -->
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+      <!--<div class="container">
+        <h2>Filterable Table</h2>
+        <p>
+          Type something in the input field to search the table for first names,
+          last names or emails:
+        </p>
+        <input
+          class="form-control"
+          id="myInput"
+          type="text"
+          placeholder="Search.."
+        />
+        <br />
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Nombre Completo</th>
+              <th>Rut</th>
+              <th>Número de cuenta</th>
+              <th>Monto($)</th>
+              <th>Día</th>
+              <th>Producto</th>
+              <th>Código de servicio</th>
+            </tr>
+          </thead>
+          <tbody id="myTable">
+            <tr>
+              <td>John Doe</td>
+              <td>12.345.789-0</td>
+              <td>123123</td>
+              <td>5000</td>
+              <td>10</td>
+              <td>APV</td>
+              <td>1010</td>
+            </tr>
+            <tr>
+              <td>Mary Moe</td>
+              <td>17.375.788-1</td>
+              <td>456456</td>
+              <td>10000</td>
+              <td>Mis metas</td>
+              <td>2020</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@greatstuff.com</td>
+            </tr>
+            <tr>
+              <td>Anja</td>
+              <td>Ravendale</td>
+              <td>a_r@test.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>-->
+
+      <script>
+        $(document).ready(function () {
+          $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            });
+          });
+        });
+      </script>
+
+      <!-- TABLA -->
+        <tbody></tbody>
+      </table>
+      
+      <div class="exportar">
+      
+        <span>Monto Total: $0</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>
+        © 2023 Grupo3 Hackathon Banchile Inversiones. Todos los derechos
+        reservados.
+      </p>
+    </div>
+
+    <!-- Scripts al final del cuerpo para mejorar el rendimiento -->
+   
+    
+    </script>
+    <!-- Agrega el enlace al archivo JavaScript de Bootstrap (opcional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
